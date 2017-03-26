@@ -5,29 +5,73 @@
 }
 
 /* Navigation Styles */
+.nav-down {
+	position: fixed;
+	transition: top 0.5s ease-in-out;
+	width: 100%;
+	background: linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.3));
+	border-bottom: solid 1px rgba(0,0,0,0.5);
+	height: 75px;
+}
+.nav-up {
+	position: fixed;
+	transition: top 0.5s ease-in-out;
+	width: 100%;
+    top: -10px;
+	background: none;
+}
 #nav ul li {
 	display: inline-block;
 	color: white;
+	position: relative;
+	right: 30px;
 }
 #nav ul {
-	text-align: center; /* Center Navigation Content */
-	background: rgba(255,200,255,0.6);
-	padding: 20px;
-	position: fixed;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	/*position: fixed;*/
 	width: 100%;
 	color: white;
 }
 #nav ul li a {
-	color: white;
+	color: rgba(0,0,0,0.5);
 	text-decoration: none;
 	font-weight: bold;
 	/*margin-right: 5%;*/
 	/*margin-left: 5%;*/
 	padding-right: 10px;
-	padding-left: 20px;
-	font-family: times new roman;
+	padding-left: 10px;
+	font-family: Futura, times new roman;
+	font-size: 16px;
 }
+/*Format active class of navbar*/
+#nav ul li .active {
+	color: white;
+}
+/*Format evergreen logo styles*/
 
+#evergreen-logo img{
+	display: inline-block;
+	width: 40px;
+	height: auto;
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+/*Format evergreen logo styles*/
+#LinkedIn-profile img{
+	width: 40px;
+	height: auto;
+	float: right;
+	margin-top: 10px;
+	margin-right: 25px;
+	position: relative;
+	top: -65px;
+	border-radius: 40px;
+	-moz-border-radius: 40px;
+	-webkit-border-radius: 40px;
+}
 /* Top Background Image Properties */
 #img-top {
 	background-image: url("trees_top.jpg");
@@ -39,10 +83,10 @@
 	background-size: cover;
 }
 #top-layer {
-	background-color: rgba(0, 83, 0, 0.4);
-    position: absolute;
-    top: 0px;
-    left: 0;
+	background-color: rgba(0, 25, 0, 0.4);
+    /*position: absolute;
+    top: 20px;
+    left: 0px;*/
     width: 100%;
     height: 800px;
 }
@@ -60,11 +104,90 @@
 	font-family: Times New Roman, Din;
 	max-width: 800px;
 }
+#top-layer h1 small{
+	font-size: 36px;
+	position: relative;
+	top: -50px;
+	color: #005E06;
+	text-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+}
 
-/* Format Main Content*/
-#main-content {
+#top-layer h6 {
+	color: white;
+	margin: auto;
+	text-align: center;
+	height: 100%;
+	padding: 200px;
+	font-size: 24px;
+	font-family: Times New Roman, Din;
+}
+
+
+
+
+
+
+/* Format About Content*/
+#about-content {
 	width: 100%;
-	height: 1000px;
+	height: 800px;
+	background: green;
+}
+
+
+
+/* Format Team Content*/
+#ourTeam-content {
+	width: 100%;
+	background: rgba(0,0,0,0.1);
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#ourTeam-container{
+	width: 95%;
+	height: 600px;
+	margin: auto;
+	background: #f2f2f2;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.3);
+}
+/*Format OurTeam content inside*/
+#ourTeam-desc img {
+	float: left;
+}
+#ourTeam-desc p {
+	float: right;
+	width: 75%;
+	padding: 5%;
+	font-size: 14px;
+}
+
+
+
+
+
+
+/*Contact Us styles*/
+#contactUs-header {
+  margin: 0;
+  /*position: relative;*/
+  width: 100%;
+  background-color: #aaa;
+  height: 200px;
+  opacity: 1;
+  text-align: center;
+  font-family: 'helvetica';
+  font-size: 80px;
+  font-weight: 100;
+  color: #fff;
+}
+.title {
+  /*position: relative;
+  top: 40%;
+  left: 100px;*/
+	float: left;
+	margin-top: 75px;
+	margin-left: 100px;
 }
 
 /* Style Contact Us form */
@@ -191,7 +314,7 @@ form input[type="submit"]:hover {
 }
 #footer {
 	background: rgba(0,0,0,0.8);
-	padding-left: 20px
+	padding-left: 20px;
 }
 #footer #all-rights {
 	display: inline-block;
@@ -215,31 +338,7 @@ form input[type="submit"]:hover {
 }
 #footer {
 	text-align: center;
-}
-
-
-
-
-
-
-/*Contact Us styles*/
-
-#contactUs-header {
-  margin: 0;
-  position: relative;
-  width: 100%;
-  background-color: #aaa;
-  height: 200px;
-  opacity: 1;
-  text-align: center;
-  font-family: 'helvetica';
-  font-size: 80px;
-  font-weight: 100;
-  color: #fff;
-}
-
-.title {
-  position: absolute;
-  top: 40%;
-  left: 100px;
+	border-top: solid 1px black;
+	/*position: relative;*/
+	/*Can possibly fix map*/
 }
