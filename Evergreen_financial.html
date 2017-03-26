@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Evergreen Financial: Integrity + Honesty</title>
+		<link href="Evergreen_financial.css" rel="stylesheet" type="text/css">
+		<link href="Contact_us.css" rel="stylesheet" type="text/css">
+	</head>
+	
+	<body>
+		
+		<div id="img-top-cont">
+			<div id="img-top">
+				
+				<!--Navigation Top -->
+				<div id="nav">
+					<ul>
+						<li>
+							<a href="#">Investments</a>
+						</li>
+						<li>
+							<a href="#">About</a>
+						</li>
+						<li>
+							<a href="#">Our Team</a>
+						</li>
+						<li>
+							<a href="#">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<div id="top-layer">
+					<h1>Evergreen Financial</h1>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="main-content">
+		
+		</div>
+		
+		<div id="contactUs-header" class="fade"><div class="title">Contact Us</div></div>
+		
+		
+		
+		<!--Contact Us Form -->
+		<div id="forms-container" class="fade">
+					<form>
+						<fieldset>
+
+							<label for="form-name">Name</label>
+							<input  class="fade" type="text" id="form-name" placeholder="name" required>
+
+							<label for="form-email">Email</label>
+							<input type="email" id="form-email" placeholder="example@gmail.com">
+
+							<label for="form-subject">Subject</label>
+							<input type="tel" id="form-subject" placeholder="subject">
+
+							<label for="form-message">Send a Message</label>
+							<textarea id="form-message"placeholder="write your message here."></textarea>
+
+							<input id="submit" type="submit" value="Send Message">
+
+						</fieldset>
+					</form>
+				</div>
+
+		<!-Location of Evergreen Map -->
+		<div id="map-cont">
+			<div id="map-background">
+				<div id="content-left">
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--Google Map of Location -->
+
+		<div id="map">
+		</div>
+		<div id="location-cont">
+			<div id="location">
+				<div id="location-text" class="fade">
+					<h2>Office Location</h2>
+					<h4>Cleveland, Ohio</h4>
+					<h2>Phone</h2>
+					<h4>330-575-0709</h4>
+					<h2>Email</h2>
+					<h4>dragdi15@gmail.com</h4>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="footer-cont">
+			<div id="footer">
+				<ul>
+					<li>
+						<a href="#">Investments</a>
+					</li>
+					<li>
+						<a href="#">About</a>
+					</li>
+					<li>
+						<a href="#">Our Team</a>
+					</li>
+					<li>
+						<a href="#c">Contact</a>
+					</li>
+				</ul>
+				<div id="all-rights">
+					<small>&copy; 2017 - Evergreen Financial All Rights Reserved</small>
+				</div>
+				
+				 <a id="link" href="https://www.linkedin.com/in/dillon-dragomir-4091b9b7">
+					 <img border="0" alt="My LinkedIn" src="LinkedIn2.png" width="1028" height="249"></a>
+			</div>
+		</div>
+		
+    
+    
+		<!-- Google Maps API -->
+		<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK7bUPEu9yhpRXnm__H1rlEEf2f0rpEv0&callback=initMap">
+    </script>
+		
+		<!-- CDN jQuery -->
+		<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+	
+		<script type="text/javascript">
+		  function initMap() {
+			var uluru = {lat: 41.499320, lng: -81.694361};
+			var map = new google.maps.Map(document.getElementById('map'), {
+			  zoom: 7,
+			  center: uluru,
+				disableDefaultUI: true
+			});
+			var marker = new google.maps.Marker({
+			  position: uluru,
+			  map: map
+			});
+		  }
+			
+			/*
+			$(window).on("load",function() {
+				
+			  $(window).scroll(function() {
+				var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+				//var windowTop = $(this).scrollTop();
+				$(".fade").each(function() {
+				  //Check the location of each desired element 
+				  var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+				  // If the element is completely within bounds of the window, fade it in 
+				  if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+					if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
+				  } else { //object goes out of view (scrolling up)
+					if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
+				  }
+				});
+			  }).scroll(); //invoke scroll-handler on page-load
+			});*/
+				
+			
+				//Fade in and out elements
+			    $(window).on("load",function() {
+				function fade() {
+					var animation_height = $(window).innerHeight() * 0.25;
+					var ratio = Math.round( (1 / animation_height) * 10000 ) / 10000;
+
+					$('.fade').each(function() {
+
+						var objectTop = $(this).offset().top;
+						var windowBottom = $(window).scrollTop() + $(window).innerHeight();
+
+						if ( objectTop < windowBottom ) {
+							if ( objectTop < windowBottom - animation_height ) {
+								//$(this).html( 'fully visible' );
+								$(this).css( {
+									transition: 'opacity 0.1s linear',
+									opacity: 1
+								} );
+
+							} else {
+								//$(this).html( 'fading in/out' );
+								$(this).css( {
+									transition: 'opacity 0.25s linear',
+									opacity: (windowBottom - objectTop) * ratio
+								} );
+							}
+						} else {
+							//$(this).html( 'not visible' );
+							$(this).css( 'opacity', 0 );
+						}
+					});
+				}
+				$('.fade').css( 'opacity', 0 );
+				fade();
+				$(window).scroll(function() {fade();});
+			});
+
+		
+		</script>
+	
+	</body>
+</html>

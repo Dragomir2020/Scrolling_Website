@@ -1,0 +1,245 @@
+/* Evergreen Financial html Styles */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Navigation Styles */
+#nav ul li {
+	display: inline-block;
+	color: white;
+}
+#nav ul {
+	text-align: center; /* Center Navigation Content */
+	background: rgba(255,200,255,0.6);
+	padding: 20px;
+	position: fixed;
+	width: 100%;
+	color: white;
+}
+#nav ul li a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	/*margin-right: 5%;*/
+	/*margin-left: 5%;*/
+	padding-right: 10px;
+	padding-left: 20px;
+	font-family: times new roman;
+}
+
+/* Top Background Image Properties */
+#img-top {
+	background-image: url("trees_top.jpg");
+	height: 800px;
+	background-attachment: fixed;
+	top: 0px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#top-layer {
+	background-color: rgba(0, 83, 0, 0.4);
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 800px;
+}
+
+/* Top Background Text styles */
+#top-layer h1 {
+	color: rgba(255,255,255,0.8);
+	/*width: 75%;*/
+	margin: auto;
+	text-align: center;
+	height: 100%;
+	padding: 200px;
+	/*line-height: 800px;*/
+	font-size: 100px;
+	font-family: Times New Roman, Din;
+	max-width: 800px;
+}
+
+/* Format Main Content*/
+#main-content {
+	width: 100%;
+	height: 1000px;
+}
+
+/* Style Contact Us form */
+form label,
+form input,
+form textarea{
+	display: block;
+	margin: auto;
+	width: 50%;
+	max-width: 400px;
+	margin-top: 20px;
+}
+form {
+	padding: 20px
+}
+form label {
+	color: black;
+	font-family: futura;
+	text-shadow: 0px 1px rgba(0,0,0,0.3);
+} 
+form input {
+	padding: 5px;
+	/*border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;*/
+	border: none;
+	border-bottom: solid 1px #737373;
+	outline: none;
+	background: none;
+}
+form input:hover {
+	border-bottom: solid 1px black;
+}
+
+form textarea {
+	/*
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;*/
+	height: 150px;
+	outline: none;
+	border: none;
+	border-bottom: solid 1px #737373;
+	resize: none;
+	background: none;
+}
+form textarea:hover {
+	border-bottom: solid 1px black;
+}
+fieldset {
+	border: 0 none;
+}
+#forms-container {
+	width: 100%;
+	background: #f2f2f2;
+	padding: 20px;
+
+}
+form input[type="submit"] {
+	background: linear-gradient(rgb(0,150,0),rgb(0,83,0));
+	color: white;
+	font-weight: bold;
+	padding: 10px 5px 10px 5px;
+	font-size: 12px;
+	width: 110px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+form input[type="submit"]:hover {
+	background: linear-gradient(rgb(0,83,0),rgb(0,150,0));
+}
+
+/* Format Map */
+#map {
+        height: 400px;
+        width: 60%;
+		float: right;
+       }
+/*Format Location Box and information */
+#location-cont {
+	width: 40%;
+	float: left;
+	height: 400px;
+	background: white;
+}
+#location {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(0,83,0,0.7),rgba(0,100,0,0.7));
+	box-shadow: -5px 0px 5px -1px green;
+}
+#location-text{
+	width: 90%;
+	margin: auto;
+	text-align: center;
+	height: 100%;
+	padding-top: 20px;
+}
+#location-text h2,
+#location-text h4 {
+	margin: 30px;
+	color: rgba(255,255,255,1);
+	font-family: times new roman;
+	
+}
+
+/* Format Footer Styles */
+#footer ul li {
+	display: inline-block;
+	
+}
+#footer ul li a {
+	text-decoration: none;
+	color: #737373;
+	margin-right: 10px;
+	margin-left: 10px;
+	font-family: Times New Roman;
+}
+#footer ul {
+	padding-top: 25px;
+	display: inline-block;
+	float: left;
+}
+#footer {
+	background: rgba(0,0,0,0.8);
+	padding-left: 20px
+}
+#footer #all-rights {
+	display: inline-block;
+	margin: auto;
+	color: #737373;
+	padding: 25px;
+	position: relative;
+	right: 75px;
+}
+
+#footer img {
+	width: 100px;
+	height: auto;
+	vertical-align: middle;
+	float: right;
+	margin: 20px;
+}
+#footers #link {
+	vertical-align: middle;
+	width: 200px;
+}
+#footer {
+	text-align: center;
+}
+
+
+
+
+
+
+/*Contact Us styles*/
+
+#contactUs-header {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  background-color: #aaa;
+  height: 200px;
+  opacity: 1;
+  text-align: center;
+  font-family: 'helvetica';
+  font-size: 80px;
+  font-weight: 100;
+  color: #fff;
+}
+
+.title {
+  position: absolute;
+  top: 40%;
+  left: 100px;
+}
