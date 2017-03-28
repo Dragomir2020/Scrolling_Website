@@ -6,18 +6,29 @@
 
 /* Navigation Styles */
 .nav-down {
+	top: 0px;
 	position: fixed;
 	transition: top 0.5s ease-in-out;
+	-webkit-transition: top 0.5s ease-in-out;
+	-moz-transition: top 0.5s ease-in-out;
+	-ms-transition: top 0.5s ease-in-out;
+	-o-transition: top 0.5s ease-in-out;
 	width: 100%;
 	background: linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.3));
+	background: -webkit-linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.3));
+	background: -moz-linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.3));
 	border-bottom: solid 1px rgba(0,0,0,0.5);
 	height: 75px;
 }
 .nav-up {
 	position: fixed;
+	top: -10px;
 	transition: top 0.5s ease-in-out;
+	-webkit-transition: top 0.5s ease-in-out;
+	-moz-transition: top 0.5s ease-in-out;
+	-ms-transition: top 0.5s ease-in-out;
+	-o-transition: top 0.5s ease-in-out;
 	width: 100%;
-    top: -10px;
 	background: none;
 }
 #nav ul li {
