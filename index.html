@@ -19,7 +19,7 @@
 						<a id="link" href="http://www.northcoastsecurities.com/richardwunderlich">
 					 <img border="0" alt="My LinkedIn" src="evergreen-logo.png" width="170" height="147"></a>
 					</div>
-					
+					<span id="nav-up-border">
 					<ul>
 						<li>
 							<a class="active" href="#top-layer">Investments</a>
@@ -34,6 +34,7 @@
 							<a href="#contactUs">Contact</a>
 						</li>
 					</ul>
+					</span>
 					
 					<!--linkedIn Profile-->
 					<div id="LinkedIn-profile">
@@ -107,9 +108,6 @@ Specialties: securities compliance, SEC reporting, forensic accounting, asset pr
 			</div>
 		
 		
-		
-		
-
 		<!--Location of Evergreen Map -->
 		<div id="map-cont">
 			<div id="map-background">
@@ -177,18 +175,7 @@ Specialties: securities compliance, SEC reporting, forensic accounting, asset pr
 	
 		<script type="text/javascript">
 			
-			function initMap() {
-			var uluru = {lat: 41.499320, lng: -81.694361};
-			var map = new google.maps.Map(document.getElementById('map'), {
-			  zoom: 7,
-			  center: uluru,
-				disableDefaultUI: true
-			});
-			var marker = new google.maps.Marker({
-			  position: uluru,
-			  map: map
-			});
-		  }
+			
 			
 			/*
 			$(window).on("load",function() {
@@ -326,12 +313,15 @@ Specialties: securities compliance, SEC reporting, forensic accounting, asset pr
 				var st = $(this).scrollTop();
 
 				// Make sure they scroll more than delta
+				/*
 				if(Math.abs(lastScrollTop - st) <= delta)
 					return;
+					*/
+
 
 				// If they scrolled down and are past the navbar, add class .nav-up.
 				// This is necessary so you never see what is "behind" the navbar.
-				if (st > lastScrollTop && st > navbarHeight){
+				if (st < 800/*st > lastScrollTop && st > navbarHeight*/){
 					// Scroll Down
 					$('#nav').removeClass('nav-down').addClass('nav-up');
 				} else {
@@ -344,6 +334,18 @@ Specialties: securities compliance, SEC reporting, forensic accounting, asset pr
 				lastScrollTop = st;
 			}
 
+			function initMap() {
+				var uluru = {lat: 41.499320, lng: -81.694361};
+				var map = new google.maps.Map(document.getElementById('map'), {
+				  zoom: 7,
+				  center: uluru,
+					disableDefaultUI: true
+				});
+				var marker = new google.maps.Marker({
+				  position: uluru,
+				  map: map
+				});
+			  }
 		
 		</script>
 	

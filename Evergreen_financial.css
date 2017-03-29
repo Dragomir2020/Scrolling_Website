@@ -14,9 +14,9 @@
 	-ms-transition: top 0.5s ease-in-out;
 	-o-transition: top 0.5s ease-in-out;
 	width: 100%;
-	background: linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.3));
-	background: -webkit-linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.3));
-	background: -moz-linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.3));
+	background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.3));
+	background: -webkit-linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.3));
+	background: -moz-linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.3));
 	border-bottom: solid 1px rgba(0,0,0,0.5);
 	height: 75px;
 }
@@ -30,13 +30,26 @@
 	-o-transition: top 0.5s ease-in-out;
 	width: 100%;
 	background: none;
+	border-bottom: none;
+}
+.nav-up nav-up-border ul li {
+	border: none;
+}
+.nav-up ul li a{
+	color: black;
 }
 #nav ul li {
 	display: inline-block;
 	color: white;
 	position: relative;
 	right: 30px;
+	padding-bottom: 20px;
 }
+/*
+#nav ul li:hover {
+	box-sizing: border-box;
+	border-bottom: solid 5px white;
+}*/
 #nav ul {
 	text-align: center;
 	padding-top: 30px;
@@ -45,23 +58,22 @@
 	width: 100%;
 	color: white;
 }
-#nav ul li a {
-	color: rgba(0,0,0,0.5);
+ ul li a {
+	color: #8C8F96;
 	text-decoration: none;
 	font-weight: bold;
-	/*margin-right: 5%;*/
-	/*margin-left: 5%;*/
 	padding-right: 10px;
 	padding-left: 10px;
 	font-family: Futura, times new roman;
 	font-size: 16px;
 }
 /*Format active class of navbar*/
-#nav ul li .active {
+.nav-down#nav ul li .active{
 	color: white;
+	border-bottom: solid 4px white;
+	padding-bottom: 20px;
 }
 /*Format evergreen logo styles*/
-
 #evergreen-logo img{
 	display: inline-block;
 	width: 40px;
@@ -78,10 +90,11 @@
 	margin-top: 10px;
 	margin-right: 25px;
 	position: relative;
-	top: -65px;
+	top: -85px;
 	border-radius: 40px;
 	-moz-border-radius: 40px;
 	-webkit-border-radius: 40px;
+	border: solid 1px black;
 }
 /* Top Background Image Properties */
 #img-top {
@@ -133,19 +146,12 @@
 	font-family: Times New Roman, Din;
 }
 
-
-
-
-
-
 /* Format About Content*/
 #about-content {
 	width: 100%;
 	height: 800px;
 	background: green;
 }
-
-
 
 /* Format Team Content*/
 #ourTeam-content {
@@ -161,6 +167,8 @@
 	background: #f2f2f2;
 	border-radius: 10px;
 	box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.3);
 }
 /*Format OurTeam content inside*/
 #ourTeam-desc img {
@@ -172,11 +180,6 @@
 	padding: 5%;
 	font-size: 14px;
 }
-
-
-
-
-
 
 /*Contact Us styles*/
 #contactUs-header {
@@ -259,6 +262,8 @@ fieldset {
 }
 form input[type="submit"] {
 	background: linear-gradient(rgb(0,150,0),rgb(0,83,0));
+	background: -moz-linear-gradient(rgb(0,150,0),rgb(0,83,0));
+	background: -webkit-linear-gradient(rgb(0,150,0),rgb(0,83,0));
 	color: white;
 	font-weight: bold;
 	padding: 10px 5px 10px 5px;
@@ -270,6 +275,8 @@ form input[type="submit"] {
 }
 form input[type="submit"]:hover {
 	background: linear-gradient(rgb(0,83,0),rgb(0,150,0));
+	background: -webkit-linear-gradient(rgb(0,83,0),rgb(0,150,0));
+	background: -moz-linear-gradient(rgb(0,83,0),rgb(0,150,0));
 }
 
 /* Format Map */
@@ -288,6 +295,8 @@ form input[type="submit"]:hover {
 #location {
 	width: 100%;
 	height: 100%;
+	background: -webkit-linear-gradient(rgba(0,83,0,0.7),rgba(0,100,0,0.7));
+	background: -moz-linear-gradient(rgba(0,83,0,0.7),rgba(0,100,0,0.7));
 	background: linear-gradient(rgba(0,83,0,0.7),rgba(0,100,0,0.7));
 	box-shadow: -5px 0px 5px -1px green;
 }
