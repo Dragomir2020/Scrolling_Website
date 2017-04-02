@@ -148,9 +148,42 @@
 
 /* Format About Content*/
 #about-content {
+	padding-top: 40px;
 	width: 100%;
 	height: 800px;
-	background: green;
+	background: #FEFEFA;
+	position: relative;
+	z-index:-2;
+}
+#header1 h2{
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	font-size: 45px;
+}
+#line{
+	width: 75px;
+	height: 5px;
+	display: inline-block;
+	background: #FAD6A5;
+	margin: auto;
+	position: relative;
+	z-index:-1;
+	top: -15px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+#triangle{
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 20px solid #FAD6A5;
+	margin: auto;
+}
+#center{
+	text-align: center;
 }
 
 /* Format Team Content*/
