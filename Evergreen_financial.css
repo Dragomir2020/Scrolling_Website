@@ -290,7 +290,7 @@ fieldset {
 #forms-container {
 	width: 100%;
 	background: #f2f2f2;
-	padding: 20px;
+	/*padding: 20px;*/
 
 }
 form input[type="submit"] {
@@ -338,7 +338,7 @@ form input[type="submit"]:hover {
 	margin: auto;
 	text-align: center;
 	height: 100%;
-	/*padding-top: 20px;*/
+	padding-top: 20px;
 }
 #location-text h2,
 #location-text h4 {
