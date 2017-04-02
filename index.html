@@ -169,7 +169,7 @@ Specialties: securities compliance, SEC reporting, forensic accounting, asset pr
     
 		<!-- Google Maps API  &callback=initMap -->
 		<script async defer
-    src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDK7bUPEu9yhpRXnm__H1rlEEf2f0rpEv0&callback=initMap'>
+    src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDK7bUPEu9yhpRXnm__H1rlEEf2f0rpEv0'>
     </script>
 		
 		<!-- CDN jQuery -->
@@ -339,7 +339,7 @@ Specialties: securities compliance, SEC reporting, forensic accounting, asset pr
 				lastScrollTop = st;
 			}
 
-			function initMap() {
+			$(document).ready(function initMap() {
 				var uluru = {lat: 41.499320, lng: -81.694361};
 				var map = new google.maps.Map(document.getElementById('map'), {
 				  zoom: 7,
@@ -351,7 +351,7 @@ Specialties: securities compliance, SEC reporting, forensic accounting, asset pr
 				  position: uluru,
 				  map: map
 				});
-			  }
+			  });
 		
 		</script>
 	
