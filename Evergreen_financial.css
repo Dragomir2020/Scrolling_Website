@@ -4,8 +4,59 @@
 	padding: 0px;
 }
 
-/* Navigation Styles */
+/* Format Navigation */
+.navbar{
+	 border-bottom: none;
+}
+body .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+	margin: 0px;
+	padding-top: 20px;
+	/* Move navbar left 20ox */
+	position: relative;
+	right: 5%;
+}
+/*Format color of link text */
+body .navbar .navbar-nav li a {
+	color: black;
+	font-size: 18px;
+	font-family: Futura, Times new roman;
+}
+.navbar .navbar-nav li a:hover {
+	color: white;
+}
+/*
+.navbar .navbar-nav li a:visited {
+	color: black;
+}*/
+.navbar .navbar-nav li a:active {
+	color: black;
+}
+.navbar .navbar-collapse {
+    text-align: center;
+
+}
+
+/* Format Navbar Logo */
+#link img {
+	width: 100px;
+	height: auto;
+}
+body .navbar {
+	background: none;
+}
+/* Active now class for navbar */
+.nav-down.container-fluid ul li .active-now{
+	color: white;
+	border-bottom: solid 2px white;
+	padding-bottom: 20px;
+}
+.nav-down.container-fluid ul li a {
+	color: grey;
+}
 .nav-down {
+	color: gray;
 	top: 0px;
 	position: fixed;
 	transition: top 0.5s ease-in-out;
@@ -18,7 +69,11 @@
 	background: -webkit-linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.3));
 	background: -moz-linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.3));
 	border-bottom: solid 1px rgba(0,0,0,0.5);
-	height: 75px;
+	height: 78px;
+}
+/* Need grey text on nav-down */
+body .navbar {
+	border-bottom: none;
 }
 .nav-up {
 	position: fixed;
@@ -32,70 +87,42 @@
 	background: none;
 	border-bottom: none;
 }
-.nav-up nav-up-border ul li {
-	border: none;
+.nav-up #LinkedIn-profile img{
+	width: 50px;
+	height: 50px;
+	transition: top 0.5s ease-in-out;
+	-webkit-transition: top 0.5s ease-in-out;
+	-moz-transition: top 0.5s ease-in-out;
+	-ms-transition: top 0.5s ease-in-out;
+	-o-transition: top 0.5s ease-in-out;
+	top: -60px;
 }
-.nav-up ul li a{
-	color: black;
-}
-#nav ul li {
-	display: inline-block;
-	color: white;
-	position: relative;
-	right: 30px;
-	padding-bottom: 20px;
-}
-/*
-#nav ul li:hover {
-	box-sizing: border-box;
-	border-bottom: solid 5px white;
-}*/
-#nav ul {
-	text-align: center;
-	padding-top: 30px;
-	padding-bottom: 20px;
-	/*position: fixed;*/
-	width: 100%;
-	color: white;
-}
- ul li a {
-	color: #8C8F96;
-	text-decoration: none;
-	font-weight: bold;
-	padding-right: 10px;
-	padding-left: 10px;
-	font-family: Futura, times new roman;
-	font-size: 16px;
-}
-/*Format active class of navbar*/
-.nav-down#nav ul li .active{
-	color: white;
-	border-bottom: solid 4px white;
-	padding-bottom: 20px;
-}
-/*Format evergreen logo styles*/
-#evergreen-logo img{
-	display: inline-block;
-	width: 40px;
-	height: auto;
-	float: left;
-	margin-top: 20px;
-	margin-left: 20px;
-}
-/*Format evergreen logo styles*/
+
+/* LinkedIn Navigation Link */
 #LinkedIn-profile img{
-	width: 40px;
-	height: auto;
+	width: 50px;
+	height: 50px;
 	float: right;
 	margin-top: 10px;
 	margin-right: 25px;
 	position: relative;
-	top: -85px;
+	top: -77px;
 	border-radius: 40px;
 	-moz-border-radius: 40px;
 	-webkit-border-radius: 40px;
 	border: solid 1px black;
 }
+
+/* Collapsable navigation */
+#myNavbar {
+	border-top: none;
+}
+/* Edit Hamburger */
+.container-fluid button {
+	position: relative;
+	top: 15px;
+}
+
 /* Top Background Image Properties */
 #img-top {
 	background-image: url("trees_top.jpg");
@@ -107,13 +134,22 @@
 	background-size: cover;
 }
 #top-layer {
-	background-color: rgba(0, 25, 0, 0.4);
+	background-color: rgba(0, 55, 0, 0.5);
     /*position: absolute;
     top: 20px;
     left: 0px;*/
     width: 100%;
     height: 800px;
 }
+/*
+#img-top-cont #img-top a img {
+	width: 75%;
+	max-width: 750px;
+	height: auto;
+	text-align: center;
+	margin-left: 12.5%;
+	margin-top: 100px;
+} */
 
 /* Top Background Text styles */
 #top-layer h1 {
@@ -132,7 +168,7 @@
 	font-size: 36px;
 	position: relative;
 	top: -50px;
-	color: #005E06;
+	color: grey;
 	text-shadow: 0px 1px 5px rgba(0,0,0,0.5);
 }
 
@@ -193,26 +229,30 @@
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
-#ourTeam-container{
-	width: 95%;
-	height: 600px;
-	margin: auto;
-	background: #f2f2f2;
-	border-radius: 10px;
-	box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.3);
-	-moz-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.3);
-	-webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.3);
-}
-/*Format OurTeam content inside*/
-#ourTeam-desc img {
-	float: left;
-}
-#ourTeam-desc p {
-	float: right;
+#ourTeam-content .container .row .col-sm-4 img {
 	width: 75%;
-	padding: 5%;
-	font-size: 14px;
+	height: auto;
+	max-width: 200px;
 }
+#ourTeam-content .container .row .col-sm-4 {
+	text-align: center;
+}
+#ourTeam-content .container .row .col-sm-8 {
+	padding: 50px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+#ourTeam-content .container .row .col-sm-8 p {
+	font-size: 18px;
+	font-family: Helvetica;
+	color: dimgrey;
+}
+#ourTeam-content .container .row .col-sm-8 ul li {
+	font-size: 18px;
+	font-family: Helvetica;
+	color: dimgrey;
+}
+
 
 /*Contact Us styles*/
 #contactUs-header {
@@ -248,7 +288,7 @@ form textarea{
 	margin-top: 20px;
 }
 form {
-	padding: 20px
+	padding: 20px;
 }
 form label {
 	color: black;
@@ -395,3 +435,4 @@ form input[type="submit"]:hover {
 	/*position: relative;*/
 	/*Can possibly fix map*/
 }
+
