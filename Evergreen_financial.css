@@ -3,7 +3,10 @@
 	margin: 0px;
 	padding: 0px;
 }
-
+/* Hides any overflow that may happen on mobile*/
+body {
+  overflow-x:hidden;
+}
 /* Format Navigation */
 .navbar{
 	 border-bottom: none;
