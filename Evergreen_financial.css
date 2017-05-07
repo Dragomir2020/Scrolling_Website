@@ -4,6 +4,10 @@
 	padding: 0px;
 }
 /* Hides any overflow that may happen on mobile*/
+body{
+	padding: 0px;
+	margin: 0px;
+}
 body #cut-overflow {
   overflow-x:hidden;
 }
@@ -140,7 +144,7 @@ body .navbar {
 	background-size: cover;
 	-webkit-background-position: center;
 	-webkit-background-repeat: no-repeat;
-	-webkit-background-size: cover;
+	-webkit-background-size: cover;*/
 }
 #top-layer {
 	background-color: rgba(0, 55, 0, 0.5);
@@ -358,23 +362,26 @@ form input[type="submit"]:hover {
 /* Format Map */
 #map {
         height: 400px;
-        width: 60%;
-		float: right;
+        width: 100%;
        }
 /*Format Location Box and information */
+/*
 #location-cont {
 	width: 40%;
 	float: left;
 	height: 400px;
 	background: white;
-}
+}*/
 #location {
 	width: 100%;
-	height: 100%;
-	background: -webkit-linear-gradient(rgba(0,83,0,0.7),rgba(0,100,0,0.7));
-	background: -moz-linear-gradient(rgba(0,83,0,0.7),rgba(0,100,0,0.7));
-	background: linear-gradient(rgba(0,83,0,0.7),rgba(0,100,0,0.7));
-	box-shadow: -5px 0px 5px -1px green;
+}
+#location #location-text {
+	position: relative;
+	top: -400px;
+	width: 50%;
+	background: rgba(255,255,255,0.6);
+	float: left;
+	height: 400px;
 }
 #location-text{
 	width: 90%;
@@ -383,12 +390,16 @@ form input[type="submit"]:hover {
 	height: 100%;
 	padding-top: 20px;
 }
-#location-text h2,
-#location-text h4 {
+#location-text h2{
 	margin: 30px;
-	color: rgba(255,255,255,1);
+	color: black;
 	font-family: times new roman;
 	
+}
+#location-text h4 {
+	color: grey;
+	font-family: serif;
+	font-size: 24px;
 }
 
 /* Format Footer Styles */
@@ -411,6 +422,8 @@ form input[type="submit"]:hover {
 #footer {
 	background: rgba(0,0,0,0.8);
 	padding-left: 20px;
+	position: relative;
+	top: -400px;
 }
 #footer #all-rights {
 	display: inline-block;

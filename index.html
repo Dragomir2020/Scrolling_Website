@@ -8,6 +8,12 @@
 		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<!-- Google Maps API  &callback=initMap -->
+		<script async defer
+    src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDK7bUPEu9yhpRXnm__H1rlEEf2f0rpEv0'>
+    </script>
+		
 	</head>
 	
 	<body>
@@ -173,24 +179,33 @@
 				</div>
 			</div>
 		</div>
-		
+			
+			
+			<!--iFrame Google Map -->
+			<!--<div id="map-iframe">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d382518.0973114914!2d-81.98672373977995!3d41.49511527719815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830ef2ee3686b2d%3A0xed04cb55f7621842!2sCleveland%2C+OH!5e0!3m2!1sen!2sus!4v1494118623031" width="800" height="600" frameborder="0" style="border:0" disableDefaultUI="true"allowfullscreen></iframe>
+			</div>-->
 		
 		<!--Google Map of Location -->
-
-		<div id="map">
-		</div>
+			
+		
+			
 		<div id="location-cont">
 			<div id="location">
+				<div id="map">
+			</div>
 				<div id="location-text" class="fade">
-					<h2>Office Location</h2>
+					<h2>Location</h2>
 					<h4>Cleveland, Ohio</h4>
 					<h2>Phone</h2>
 					<h4>330-575-0709</h4>
 					<h2>Email</h2>
-					<h4>dragdi15@gmail.com</h4>
+					<h4>rich@archeagle.com<h4>
+				</div>
 				</div>
 			</div>
 		</div>
+
 		
 		
 		<div id="footer-cont">
@@ -222,10 +237,7 @@
 		
     
     
-		<!-- Google Maps API  &callback=initMap -->
-		<script async defer
-    src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDK7bUPEu9yhpRXnm__H1rlEEf2f0rpEv0'>
-    </script>
+		
 		
 		<!-- CDN jQuery -->
 				<!--
@@ -385,10 +397,12 @@
 				var uluru = {lat: 41.499320, lng: -81.694361};
 				var map = new google.maps.Map(document.getElementById('map'), {
 				  zoom: 7,
-				  center: uluru,
+				  center: {lat: 41.0793, lng: -85.1394},
 					disableDefaultUI: true,
-					mapTypeId: 'roadmap'
-				});
+					mapTypeId: 'roadmap',
+					styles: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}],
+					scrollwheel: false
+				})
 				var marker = new google.maps.Marker({
 				  position: uluru,
 				  map: map
