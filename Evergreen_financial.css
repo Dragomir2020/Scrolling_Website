@@ -237,7 +237,7 @@ body .navbar {
 	padding-bottom: 50px;
 }
 #ourTeam-content .container .row .col-sm-4 img {
-	width: 75%;
+	width: 100%;
 	height: auto;
 	max-width: 200px;
 }
@@ -290,7 +290,7 @@ form input,
 form textarea{
 	display: block;
 	margin: auto;
-	width: 50%;
+	width: 80%;
 	max-width: 400px;
 	margin-top: 20px;
 }
@@ -403,6 +403,11 @@ form input[type="submit"]:hover {
 }
 
 /* Format Footer Styles */
+#footer .row .col-sm-4 {
+	margin: auto;
+	text-align: center;
+}
+
 #footer ul li {
 	display: inline-block;
 	
@@ -417,7 +422,7 @@ form input[type="submit"]:hover {
 #footer ul {
 	padding-top: 25px;
 	display: inline-block;
-	float: left;
+	/*float: left;*/
 }
 #footer {
 	background: rgba(0,0,0,0.8);
@@ -430,16 +435,18 @@ form input[type="submit"]:hover {
 	margin: auto;
 	color: #737373;
 	padding: 25px;
-	position: relative;
-	right: 75px;
+	/*position: relative;*/
+	/*right: 75px;*/
 }
 
 #footer img {
 	width: 100px;
 	height: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	vertical-align: middle;
-	float: right;
-	margin: 20px;
+	/*float: right;*/
+	margin: auto;
 }
 #footers #link {
 	vertical-align: middle;
