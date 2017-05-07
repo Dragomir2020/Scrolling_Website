@@ -130,12 +130,17 @@ body .navbar {
 /* Top Background Image Properties */
 #img-top {
 	background-image: url("trees_top.jpg");
+	-webkit-background-image: url("trees_top.jpg");
 	height: 800px;
 	background-attachment: fixed;
+	-webkit-background-attachment: fixed;
 	top: 0px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	-webkit-background-position: center;
+	-webkit-background-repeat: no-repeat;
+	-webkit-background-size: cover;
 }
 #top-layer {
 	background-color: rgba(0, 55, 0, 0.5);
