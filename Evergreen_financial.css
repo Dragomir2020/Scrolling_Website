@@ -364,16 +364,7 @@ form input[type="submit"]:hover {
         height: 400px;
        }
 /*Format Location Box and information */
-/*
-#location-cont {
-	width: 40%;
-	float: left;
-	height: 400px;
-	background: white;
-}*/
-#location {
-	width: 100%;
-}
+
 #location #location-text {
 	position: relative;
 	top: -400px;
