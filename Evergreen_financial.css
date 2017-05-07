@@ -4,7 +4,7 @@
 	padding: 0px;
 }
 /* Hides any overflow that may happen on mobile*/
-body {
+body #cut-overflow {
   overflow-x:hidden;
 }
 /* Format Navigation */
