@@ -38,12 +38,7 @@
 				  
 				<li><a class="active-now" href="#img-top-cont">Investments</a></li>
 				<li class="dropdown">
-				  <a href="#about-content">About</a><!--
-				  <ul class="dropdown-menu">
-					<li><a href="#">Page 1-1</a></li>
-					<li><a href="#">Page 1-2</a></li>
-					<li><a href="#">Page 1-3</a></li>
-				  </ul>-->
+				  <a href="#about-content">About</a>
 				</li>
 				<li><a href="#ourTeam-content">Our Team</a></li>
 				<li><a href="#contactUs">Contact</a></li>
@@ -190,7 +185,7 @@
 		<div id="location-cont">
 			<div id="location">
 				<div id="map">
-			</div>
+				</div>
 				<div id="location-text" class="fade">
 					<h2>Location</h2>
 					<h4>Cleveland, Ohio</h4>
@@ -199,80 +194,48 @@
 					<h2>Email</h2>
 					<h4>rich@archeagle.com<h4>
 				</div>
-				</div>
 			</div>
 		</div>
-
-		
-		
-		<div id="footer-cont">
+			
+		<!--<div id="footer-cont">-->
 			<div id="footer">
-				<div class="row">
-					<div class="col-sm-4">
-						<ul>
-							<li>
-								<a href="#img-top-cont">Investments</a>
-							</li>
-							<li>
-								<a href="#about-content">About</a>
-							</li>
-							<li>
-								<a href="#ourTeam-content">Our Team</a>
-							</li>
-							<li>
-								<a href="#contactUs">Contact</a>
-							</li>
-						</ul>
-					</div>
-					<div class="col-sm-4">
-						<div id="all-rights">
-							<small>&copy; 2017 - Evergreen Financial All Rights Reserved</small>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<ul>
+								<li>
+									<a href="#img-top-cont">Investments</a>
+								</li>
+								<li>
+									<a href="#about-content">About</a>
+								</li>
+								<li>
+									<a href="#ourTeam-content">Our Team</a>
+								</li>
+								<li>
+									<a href="#contactUs">Contact</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-sm-4">
+							<div id="all-rights">
+								<small>&copy; 2017 - Evergreen Financial All Rights Reserved</small>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							 <a id="link" href="https://www.linkedin.com/in/richardwunderlich/">
+								 <img border="0" alt="My LinkedIn" src="LinkedIn2.png" width="1028" height="249"></a>
 						</div>
 					</div>
-					<div class="col-sm-4">
-						 <a id="link" href="https://www.linkedin.com/in/richardwunderlich/">
-							 <img border="0" alt="My LinkedIn" src="LinkedIn2.png" width="1028" height="249"></a>
-					</div>
 				</div>
 			</div>
-		</div>
+		<!--</div>-->
+
 				
 		</div> <!-- Cut-overflow -->
 		
-    
-    
-		
-		
-		<!-- CDN jQuery -->
-				<!--
-		<script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>-->
 	
 		<script type="text/javascript">
-			
-			
-			
-			/*
-			$(window).on("load",function() {
-				
-			  $(window).scroll(function() {
-				var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-				//var windowTop = $(this).scrollTop();
-				$(".fade").each(function() {
-				  //Check the location of each desired element 
-				  var objectBottom = $(this).offset().top + $(this).outerHeight();
-				  // If the element is completely within bounds of the window, fade it in 
-				  if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-					if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
-				  } else { //object goes out of view (scrolling up)
-					if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
-				  }
-				});
-			  }).scroll(); //invoke scroll-handler on page-load
-			});*/
-				
 			
 				//Fade in and out elements
 			    $(window).on("load",function() {
@@ -316,8 +279,14 @@
 					 $('.top-fade h1').css({
 					'opacity': opacity
 					 });
+					$('.top-fade p').css({
+					'opacity': opacity
+					 });
 				}else{
 					$('.top-fade h1').css({
+					'opacity': 0.05
+					 });
+					$('.top-fade p').css({
 					'opacity': 0.05
 					 });
 				}
@@ -401,7 +370,7 @@
 				var uluru = {lat: 41.499320, lng: -81.694361};
 				var map = new google.maps.Map(document.getElementById('map'), {
 				  zoom: 7,
-				  center: {lat: 41.0793, lng: -85.1394},
+				  center: {lat: 41.6639, lng: -83.5552},
 					disableDefaultUI: true,
 					mapTypeId: 'roadmap',
 					styles: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}],
