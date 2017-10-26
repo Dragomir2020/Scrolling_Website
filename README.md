@@ -8,3 +8,4 @@
 
 # Todo
 - Implement email response system
+- Use AWS SES
